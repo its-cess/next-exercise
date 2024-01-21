@@ -1,0 +1,23 @@
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  padding: 5px 8px;
+  border-radius: 9999px;
+}
+
+.beginner {
+  background-color: green;
+  color: #000000;
+}
+
+.intermediate {
+  background-color: orangered;
+  color: #000000;
+}
+
+.expert {
+  background-color: red;
+  color: #000000;
+}

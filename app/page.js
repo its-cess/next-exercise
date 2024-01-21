@@ -45,7 +45,7 @@ export default async function Page() {
         <div className={styles.typeWrapper}>
           {allProgramTypes.map((type) => (
             <Link href={`/exercises/type/${type}`} key={type}>
-              <Card>{type}</Card>
+              <Card small>{type.replace("_", " ")}</Card>
             </Link>
           ))}
         </div>
@@ -55,7 +55,7 @@ export default async function Page() {
         <div className={styles.muscleWrapper}>
           {allMuscleGroups.map((muscle) => (
             <Link href={`/exercises/muscle/${muscle}`} key={muscle}>
-              <Card>{muscle}</Card>
+              <Card small>{muscle.replace("_", " ")}</Card>
             </Link>
           ))}
         </div>
