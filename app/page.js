@@ -1,3 +1,7 @@
+import styles from "./page.module.css";
+import Link from "next/link";
+import { Card } from "./ui/Card";
+
 export default async function Page() {
   const allProgramTypes = [
     "cardio",
@@ -36,18 +40,26 @@ export default async function Page() {
         <input type="search" placeholder="Search" />
         <button>Search</button>
       </div>
-      <div>
+      <section className={styles.programSection}>
         <h2>Program type</h2>
-        {allProgramTypes.map((type) => (
-          <h4 key={type}>{type}</h4>
-        ))}
-      </div>
-      <div>
+        <div className={styles.typeWrapper}>
+          {allProgramTypes.map((type) => (
+            <Link href={`/exercises/${type}`} key={type}>
+              <Card>{type}</Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className={styles.muscleSection}>
         <h2>Muscle groups</h2>
-        {allMuscleGroups.map((muscle) => (
-          <h4 key={muscle}>{muscle}</h4>
-        ))}
-      </div>
+        <div className={styles.muscleWrapper}>
+          {allMuscleGroups.map((muscle) => (
+            <Link href={`/exercises/${muscle}`} key={muscle}>
+              <Card>{muscle}</Card>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

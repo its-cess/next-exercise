@@ -1,4 +1,24 @@
-body {
-  box-sizing: border-box;
-  margin: 2rem;
+.programSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.typeWrapper,
+.muscleWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.typeWrapper {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.muscleSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.muscleWrapper {
+  flex-wrap: wrap;
 }
