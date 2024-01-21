@@ -44,7 +44,7 @@ export default async function Page() {
         <h2>Program type</h2>
         <div className={styles.typeWrapper}>
           {allProgramTypes.map((type) => (
-            <Link href={`/exercises/${type}`} key={type}>
+            <Link href={`/exercises/type/${type}`} key={type}>
               <Card>{type}</Card>
             </Link>
           ))}
@@ -54,7 +54,7 @@ export default async function Page() {
         <h2>Muscle groups</h2>
         <div className={styles.muscleWrapper}>
           {allMuscleGroups.map((muscle) => (
-            <Link href={`/exercises/${muscle}`} key={muscle}>
+            <Link href={`/exercises/muscle/${muscle}`} key={muscle}>
               <Card>{muscle}</Card>
             </Link>
           ))}
