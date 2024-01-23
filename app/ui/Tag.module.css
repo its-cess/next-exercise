@@ -3,13 +3,14 @@
   justify-content: center;
   align-items: center;
   max-width: fit-content;
+  font-size: 14px;
   padding: 5px 8px;
   border-radius: 9999px;
 }
 
 .beginner {
   background-color: green;
-  color: #000000;
+  color: white;
 }
 
 .intermediate {
@@ -20,4 +21,13 @@
 .expert {
   background-color: red;
   color: #000000;
+}
+
+.muscle {
+  background-color: blueviolet;
+  color: white;
+}
+
+.equipment {
+  background-color: white;
 }

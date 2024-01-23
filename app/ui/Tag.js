@@ -1,12 +1,14 @@
 import styles from "./Tag.module.css";
 import clsx from "clsx";
 
-export function Tag({ children, difficulty, className }) {
+export function Tag({ children, difficulty, muscle, equipment, className }) {
   const classes = clsx({
     [styles.tag]: true,
-    [styles.beginner]: difficulty === "beginner",
-    [styles.intermediate]: difficulty === "intermediate",
-    [styles.expert]: difficulty === "expert",
+    [styles[difficulty]]: difficulty,
+    [styles.muscle]: muscle,
+    [styles[muscle]]: muscle,
+    [styles.equipment]: equipment,
+    [styles[equipment]]: equipment,
     [className]: className
   });
 
