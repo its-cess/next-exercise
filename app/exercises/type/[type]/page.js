@@ -6,7 +6,6 @@ import { Tag } from "@/app/ui/Tag";
 export default async function Page({ params }) {
   const exercisesByType = await fetchProgramByType(params.type);
   const titleName = params.type.replace("_", " ");
-  console.log(titleName);
 
   return (
     <div className={styles.wrapper}>
