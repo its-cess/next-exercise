@@ -1,3 +1,4 @@
+"use server";
 export async function fetchProgramByType(type) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
@@ -31,5 +32,23 @@ export async function fetchProgramByMuscle(muscle) {
   }
 
   const data = res.json();
+  return data;
+}
+
+export async function fetchProgramByName(term) {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+
+  const res = await fetch(baseUrl + `?name=${term}`, {
+    headers: {
+      "X-Api-Key": apiKey
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch exercises.");
+  }
+
+  const data = await res.json();
   return data;
 }

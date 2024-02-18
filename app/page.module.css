@@ -4,7 +4,8 @@
 }
 
 .typeWrapper,
-.muscleWrapper {
+.muscleWrapper,
+.searchWrapper {
   display: flex;
   gap: 5px;
 }
@@ -14,11 +15,13 @@
   overflow-x: auto;
 }
 
-.muscleSection {
+.muscleSection,
+.searchSection {
   display: flex;
   flex-direction: column;
 }
 
-.muscleWrapper {
+.muscleWrapper,
+.searchWrapper {
   flex-wrap: wrap;
 }

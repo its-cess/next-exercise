@@ -1,0 +1,14 @@
+.searchWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchInput {
+  margin-bottom: 15px;
+}

@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import { Card } from "./ui/Card";
+import { Search } from "./ui/Search";
 
 export default async function Page() {
   const allProgramTypes = [
@@ -36,9 +37,7 @@ export default async function Page() {
       <div>
         <h3>Hey, Cecily</h3>
         <h1>Pick your workout</h1>
-        <h4></h4>
-        <input type="search" placeholder="Search" />
-        <button>Search</button>
+        <Search placeholder="Search exercises" />
       </div>
       <section className={styles.programSection}>
         <h2>Program type</h2>
