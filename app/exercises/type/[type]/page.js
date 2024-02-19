@@ -2,6 +2,7 @@ import styles from "@/app/exercises/exercises.module.css";
 import { fetchProgramByType } from "@/app/lib/data";
 import { Card } from "@/app/ui/Card";
 import { Tag } from "@/app/ui/Tag";
+import { StarIcon } from "@/app/ui/StarIcon";
 
 export default async function Page({ params }) {
   const exercisesByType = await fetchProgramByType(params.type);
@@ -20,6 +21,7 @@ export default async function Page({ params }) {
                 <Card key={ex.name}>
                   <div className={styles.titleRow}>
                     <h3 className={styles.exerciseName}>{ex.name}</h3>
+                    <StarIcon />
                     <div className={styles.tagContainer}>
                       <Tag muscle>{ex.muscle}</Tag>
                       <Tag className={styles.tag} difficulty={ex.difficulty}>

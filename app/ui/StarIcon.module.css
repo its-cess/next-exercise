@@ -1,0 +1,11 @@
+.starIcon {
+  cursor: pointer;
+}
+
+.starIcon:hover {
+  transform: scale(1.2);
+}
+
+.isFav {
+  color: red;
+}
