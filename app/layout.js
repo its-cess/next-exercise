@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import { Navbar } from "./ui/Navbar";
 
 export const metadata = {
   title: "Next Exercise",
@@ -10,8 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Link href="/">Home</Link>
         {children}
+        <Navbar>
+          <Link href="/">Home</Link>
+          <Link href="/favorites">Favorites</Link>
+        </Navbar>
       </body>
     </html>
   );
